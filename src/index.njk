@@ -1,10 +1,31 @@
 
 √{% extends '_templates/base.njk' %}
+
 {% block page_title %}Meet the Band{% endblock %}
 
 {% block content %}
 <div class="container">
-<h1> Long Live Queen! </h1>
+<h1 class="text-center"> Long Live Queen! </h1>
   <p class="text-center">Queen is one of the most iconic rock bands in history, known for their electrifying performances, genre-defying sound, and legendary frontman Freddie Mercury. This site explores the band’s unforgettable members and dives into their groundbreaking discography, from anthems like Bohemian Rhapsody to We Will Rock You. Whether you're a lifelong fan or just discovering their music, take a journey through Queen’s legacy.</p>
+</div>
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Band Members</h2>
+  <div class="row justify-content-center">
+    {% for member in members %}
+      <div class="col-sm-6 col-md-4 mb-4 d-flex">
+        <div class="w-100 text-center shadow-sm p-3 rounded h-100">
+        <img src="img/img-queen/members/{{ member.image }}" 
+          alt="{{ member.name }}" 
+          class="img-fluid mb-2 shadow-sm rounded"
+          style="height: 300px; object-fit: cover;">
+        <h5>
+       <a href="members/{{ member.slug }}.html">{{ member.name }}</a>
+          </h5>
+        <p class="mb-0"><strong>{{ member.instruments }}</strong></p>
+        <p class="text-muted">{{ member.tenure }}</p>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
