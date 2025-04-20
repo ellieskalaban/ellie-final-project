@@ -13,14 +13,11 @@
   <h2 class="text-center mb-4">Band Members</h2>
   <div class="row justify-content-center">
     {% for member in members %}
-      <div class="col-sm-6 col-md-4 mb-4 d-flex">
-        <div class="w-100 text-center shadow-sm p-3 rounded h-100">
+      <div class="col-sm-6 col-md-4 mb-4 text-center">
         <img src="img/img-queen/members/{{ member.image }}" 
           alt="{{ member.name }}" 
-          class="img-fluid mb-2 shadow-sm rounded"
-          style="height: 300px; object-fit: cover;">
-        <h5>
-       <a href="members/{{ member.slug }}.html">{{ member.name }}</a>
+          class="img-fluid mb-2 shadow-sm rounded">
+       <h5><a href="members/{{ member.slug }}.html">{{ member.name }}</a>
           </h5>
         <p class="mb-0"><strong>{{ member.instruments }}</strong></p>
         <p class="text-muted">{{ member.tenure }}</p>
