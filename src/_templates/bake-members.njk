@@ -1,1 +1,30 @@
-{% extends '_templates/base.njk' %}
+{% extends "_templates/base.njk" %}
+
+{% set relative_path = "../" %}
+
+{% block page_title %}{{ member.name }}{% endblock %}
+
+{% block content %}
+<article class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center">
+      <img 
+        src="{{ relative_path }}img/img-queen/members/{{ member.colorImage }}" 
+        alt="Color image of {{ member.name }}" 
+        class="img-fluid rounded mb-4 shadow-sm" 
+      />
+    </div>
+    <div class="col-md-8">
+      <h1>{{ member.name }}</h1>
+      <p><strong>Instruments:</strong> {{ member.instruments }}</p>
+      <p><strong>Tenure:</strong> {{ member.tenure }}</p>
+      <p><strong>Birthplace:</strong> {{ member.birthplace }}</p>
+      <p><strong>Birthdate:</strong> {{ member.birthdate }}</p>
+      <div class="mt-4">
+        {{ member.description | safe }}
+      </div>
+    </div>
+  </div>
+</article>
+{% endblock %}
+
