@@ -6,13 +6,12 @@
 {% block content %}
 <div class="container text-center my-5" style="max-width: 900px;">
 <h1 class="text-center big-title mb-4"> Long Live Queen! </h1>
-  <p class="fs-3">Queen is one of the most iconic rock bands in history, known for their electrifying performances, genre-defying sound, and legendary frontman Freddie Mercury. This site explores the band’s unforgettable members and dives into their groundbreaking discography, from anthems like Bohemian Rhapsody to We Will Rock You. Whether you're a lifelong fan or just discovering their music, take a journey through Queen’s legacy.</p>
+  <p class="fs-4">Queen is one of the most iconic rock bands in history, known for their electrifying performances, genre-defying sound, and legendary frontman Freddie Mercury. This site explores the band’s unforgettable members and dives into their groundbreaking discography, from anthems like Bohemian Rhapsody to We Will Rock You. Whether you're a lifelong fan or just discovering their music, take a journey through Queen’s legacy.</p>
 </div>
-
+<hr>
 <div class="container my-5">
   <h2 class="text-center section-title mb-4">Meet the Members</h2>
   <div class="row justify-content-center members-links">
-  <div class="row justify-content-center">
     {% for member in members %}
       <div class="col-6 col-sm-4 col-md-3 mb-4 text-center">
         <img src="img/img-queen/members/{{ member.image }}" 

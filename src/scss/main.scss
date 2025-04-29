@@ -54,3 +54,33 @@ p {font-family: "Merriweather", serif;
 .members-links a:hover {
   color: black; /* when user hovers over a member's name */
 }
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #b30000;
+  color: white;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-body {
+  flex-shrink: 0;
+}
+.card-title, .card-text {
+  color: white;
+}
+.card, .card-title, .card-text {
+  font-family: "Merriweather", serif;
+}
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}

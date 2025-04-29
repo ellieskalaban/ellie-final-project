@@ -13,3 +13,10 @@ html, body {
   #jumbo {
     margin-bottom: 30px;
   }
+
+  #jumbo img {
+    width: 100%;
+    height: 60vh; /* vh = "viewport height" */
+    object-fit: cover;
+  }
+  

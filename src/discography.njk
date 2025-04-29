@@ -2,14 +2,49 @@
 
 {% block page_title %}Discography{% endblock %}
 
-
 {% block content %}
 <article class="container">
 <h1 class="text-center big-title mb-4"> The Music of Queen</h1>
-<p class=" text-center fs-4">From the classic "Bohemian Rapsody” to the underground “The Miracle,” discover the sound of the Queen generation.</p>
-
-
-
+    <p class=" text-center fs-4">From the classic "Bohemian Rapsody” to the underground “The Miracle", every Queen album has a story. Discover the sounds and stories behind the Queen generation. 
+    </p>
 </article>
+<hr>
+<div class="container my-5">
+  <h2 class="text-center mb-4">Queen Discography</h2>
+    {% set albums = [
+  { title: "Queen", year: "1973", image: "Queen_Queen.png", link: "https://en.wikipedia.org/wiki/Queen_(Queen_album)" },
+  { title: "Queen II", year: "1974", image: "Queen_Queen_II.jpg", link: "https://en.wikipedia.org/wiki/Queen_II" },
+  { title: "Sheer Heart Attack", year: "1974", image: "Queen_Sheer_Heart_Attack.png", link: "https://en.wikipedia.org/wiki/Sheer_Heart_Attack" },
+  { title: "A Night at the Opera", year: "1975", image: "Queen_A_Night_At_The_Opera.png", link: "https://en.wikipedia.org/wiki/A_Night_at_the_Opera_(Queen_album)" },
+  { title: "A Day at the Races", year: "1976", image: "Queen_A_Day_at_the_Races.jpg", link: "https://en.wikipedia.org/wiki/A_Day_at_the_Races_(album)" },
+  { title: "News of the World", year: "1977", image: "Queen_News_Of_The_World.png", link: "https://en.wikipedia.org/wiki/News_of_the_World_(album)" },
+  { title: "Jazz", year: "1978", image: "Queen_Jazz.png", link: "https://en.wikipedia.org/wiki/Jazz_(Queen_album)" },
+  { title: "The Game", year: "1980", image: "Queen_The_Game.png", link: "https://en.wikipedia.org/wiki/The_Game_(Queen_album)" },
+  { title: "Flash Gordon", year: "1980", image: "Queen_Flash_Gordon.png", link: "https://en.wikipedia.org/wiki/Flash_Gordon_(soundtrack)" },
+  { title: "Hot Space", year: "1982", image: "Queen_Hot_Space.png", link: "https://en.wikipedia.org/wiki/Hot_Space" },
+  { title: "The Works", year: "1984", image: "Queen_The_Works.png", link: "https://en.wikipedia.org/wiki/The_Works_(Queen_album)" },
+  { title: "A Kind of Magic", year: "1986", image: "Queen_A_Kind_Of_Magic.png", link: "https://en.wikipedia.org/wiki/A_Kind_of_Magic" },
+  { title: "The Miracle", year: "1989", image: "Queen_The_Miracle.png", link: "https://en.wikipedia.org/wiki/The_Miracle_(album)" },
+  { title: "Innuendo", year: "1991", image: "Queen_Innuendo.png", link: "https://en.wikipedia.org/wiki/Innuendo_(Queen_album)" },
+  { title: "Made in Heaven", year: "1995", image: "Queen_Made_in_Heaven.jpg", link: "https://en.wikipedia.org/wiki/Made_in_Heaven_(Queen_album)" }
+] %}
+    <div class="row justify-content-center">
+    {% for album in albums %}
+    <div class="col-6 col-sm-4 col-md-3 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ relative_path }}img/img-queen/discs/{{ album.image }}" class="card-img-top" alt="{{ album.title }}">
+        <div class="card-body text-center">
+          <h5 class="card-title">
+            <a href="{{ album.link }}" target="_blank" style="color: white; text-decoration: underline;">
+            {{ album.title }}
+            </a>
+        </h5>
+          <p class="card-text">{{ album.year }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}
 
