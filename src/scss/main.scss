@@ -30,3 +30,27 @@ h3 {
 h1 {
   font-family: "Merriweather", serif;
 }
+
+h2 {
+  font-family: "Merriweather", serif;
+}
+
+p {font-family: "Merriweather", serif;
+}
+
+.big-title {
+  font-size: 64px;
+}
+
+.section-title {
+  font-size: 48px;
+}
+
+.members-links a {
+  color: darkred;
+  text-decoration: underline; /* optional, keeps underline */
+}
+
+.members-links a:hover {
+  color: black; /* when user hovers over a member's name */
+}
